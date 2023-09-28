@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
 import Navbar from "./components/Navbar.jsx" // Corrected component name
 import Home from "./pages/navbar/Home.jsx" // Corrected file path and casing
@@ -11,13 +11,13 @@ function App() {
   return (
     <Router>
       <Navbar />  
-      <Switch>
+      <Routes>
         <Route path='/' exact component={Home} />
         <Route path='/text' component={Text} />
         <Route path='/comp' component={Comp} />
         <Route path='/misc' component={Misc} />
         <Route path='/extra' component={Extra} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
